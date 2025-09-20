@@ -1,0 +1,97 @@
+site_name: 打造超人學習能力
+site_url: ""
+site_description: 用回你本來就有的超能力 - 打造超人學習能力線上閱讀版本
+site_author: Learn-Hack
+
+theme:
+  name: material
+  language: zh
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 自動切換主題
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切換到深色模式
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切換到淺色模式
+  features:
+    - navigation.instant      # 更快的頁面切換
+    - navigation.tracking     # 側邊欄跟蹤當前標題
+    - content.code.copy       # 代碼塊複製按鈕
+    - toc.integrate           # 右側目錄與正文融合
+    - navigation.top          # 頂部導航
+    - search.highlight        # 搜索高亮
+    - search.share            # 搜索分享
+
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s\-，。；、,]+'   # 簡單中文分詞
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: "永久連結到此標題"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - 首頁: index.md
+  - 打造超人學習能力（上）:
+    - 前言: 00.md
+    - 第一章 提升學習的關鍵能力到底是什麼？: 01.md
+    - 第二章 建立可見的學習目標: 02.md
+    - 第三章 切西瓜從中間學起: 03.md
+    - 第四章 科學練記憶，談「記住」與「學會」: 04.md
+    - 第五章 高手都在使用的刻意練習四步法: 05.md
+    - 第六章 天才大師不傳的經驗值輕鬆暴升秘技: 06.md
+    - 第七章 心流學習法「動機拆解篇」: 07.md
+    - 第八章 心流學習法「技能實戰篇」: 08.md
+    - 第九章 推動點火引擎、將自己的學習旅程化成一場遊戲: 09.md
+    - 第十章 變成高手最快只需要一年的時間: 10.md
+  - 打造超人學習能力（下）:
+    - 讀書篇(1) 打造超人讀書能力: 11.md
+    - 讀書篇(2) 輕鬆的將書中的資訊有效納為己用: 12.md
+    - 讀書篇(3) 做出真正能記住內容的讀書筆記: 13.md
+    - 讀書篇(4) 有效率利用碎片時間吸收書本資訊: 14.md
+    - 上課篇(1) 如何省力向老師學習: 15.md
+    - 上課篇(2) 如何聽會一門課: 16.md
+    - 如何自學會一門學問: 17.md
+    - 如何學會編程語言: 18.md
+    - 如何學會外國語言: 19.md
+    - 後記: 20.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/liyanan/learn-hack
+  version:
+    provider: mike

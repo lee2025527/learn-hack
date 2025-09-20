@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# 获取应用程序包路径
+APP_DIR="$(dirname "$0")"
+PROJECT_DIR="/Users/liyanan/Documents/GitHub/learn-hack"
+
+# 显示启动对话框
+osascript -e 'display dialog "🚀 正在启动《打造超人學習能力》网站..." with title "学习网站启动器" buttons {"取消", "启动"} default button "启动" giving up after 5'
+
+if [ $? -eq 0 ]; then
+    # 执行启动脚本
+    osascript -e 'tell application "Terminal" to activate'
+    osascript -e 'tell application "Terminal" to do script "cd '\''/Users/liyanan/Documents/GitHub/learn-hack'\'' && ./start_website.sh"'
+    
+    # 显示完成通知
+    osascript -e 'display notification "网站已启动！浏览器将自动打开。" with title "✅ 启动完成" subtitle "http://127.0.0.1:8000"'
+fi
